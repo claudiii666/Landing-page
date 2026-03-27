@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Portfolio de Claudia Ortega, desarrolladora web en formación especializada en HTML, CSS y JavaScript.">
+  <meta name="author" content="Claudia Orta">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ── PROGRESS BAR ──────────────────── -->
+<div id="progress-bar"></div>
+
+<!-- ── CURSOR ────────────────────────── -->
+<div id="cursor-ring"></div>
+<div id="cursor-dot"></div>
+
+<!-- ── PARTICLES ─────────────────────── -->
+<canvas id="particle-canvas"></canvas>
+
+<!-- ── BLOBS ─────────────────────────── -->
+<div class="blobs">
+  <div class="blob b1"></div>
+  <div class="blob b2"></div>
+  <div class="blob b3"></div>
+  <div class="blob b4"></div>
+</div>
+
+<!-- ── BACK TO TOP ───────────────────── -->
+<button id="back-top" aria-label="Volver arriba">↑</button>
+
+<div class="wrap">
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo">C.O.P</div>
+    <ul class="nav-links">
+      <li><a href="#hero">Inicio</a></li>
+      <li><a href="#about">Sobre mí</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#proyectos">Proyectos</a></li>
+      <li><a href="#experiencia">Experiencia</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <!-- ═══════════ HERO ═══════════ -->
+  <section id="hero">
+
+    <div class="hero-content">
+      <div class="hero-badge">
+        <div class="badge-dot"></div>
+        Buscando prácticas &amp; trabajo
+      </div>
+
+      <h1 class="hero-name">
+        Claudia<br>
+        <em>Orta Pereda</em>
+      </h1>
+
+      <p class="hero-tagline">Desarrolladora de Aplicaciones Multiplataforma </p>
+
+      <p class="hero-sub">
+        Desarrolladora multiplataforma con formación en desarrollo web, aplicaciones móviles y bases de datos. 
+        Me apasiona construir aplicaciones funcionales, aprender nuevas tecnologías y mejorar constantemente mis habilidades como programadora.
+      </p>
+
+      <div class="hero-chips">
+        <span class="chip v">HTML &amp; CSS</span>
+        <span class="chip p">Java</span>
+        <span class="chip c">SQL</span>
+        <span class="chip a">Apps Móviles</span>
+      </div>
+
+      <div class="hero-btns">
+        <a href="#proyectos" class="btn btn-primary">Ver proyectos ✦</a>
+        <a href="#contacto"  class="btn btn-ghost">Contactar →</a>
+      </div>
+    </div>
+
+    <!-- Foto placeholder -->
+    <div class="hero-visual">
+      <div class="photo-wrap">
+        <div class="spin-ring"></div>
+        <div class="photo-card">👩‍💻</div>
+        <div class="photo-tag t1">Creativa</div>
+        <DAM class="photo-tag t2">DAM 2026</div>
+        <div class="photo-tag t3">Guadalajara</div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ═══════════ STATS ═══════════ -->
+  <div class="stats-bar">
+    <div class="stat-card glass reveal">
+      <span class="stat-num" data-target="3" data-suffix="+">0</span>
+      <div class="stat-label">Proyectos<br>completados</div>
+    </div>
+    <div class="stat-card glass reveal">
+      <span class="stat-num" data-target="2" data-suffix="a">0</span>
+      <div class="stat-label">Años en<br>desarrollo web</div>
+    </div>
+    <div class="stat-card glass reveal">
+      <span class="stat-num" data-target="2" data-suffix="">0</span>
+      <div class="stat-label">Idiomas:<br>ES · EN B1</div>
+    </div>
+    <div class="stat-card glass reveal">
+      <span class="stat-num" data-target="100" data-suffix="%">0</span>
+      <div class="stat-label">Ganas de<br>aprender</div>
+    </div>
+  </div>
+
+  <!-- ═══════════ SOBRE MÍ ═══════════ -->
+  <section id="about" class="section">
+    <p class="s-label reveal">Quién soy</p>
+    <h2 class="s-title reveal">Sobre <em>mí</em></h2>
+
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p>
+          Hola, soy <strong>Claudia</strong>, una chicacon muchas ganas
+          de abrirse camino en el mundo del desarrollo web y el diseño digital.
+        </p>
+        <p>
+          Actualmente estoy terminando el <span class="highlight-box">Grado Superior en Desarrollo de Aplicaciones Multiplataforma</span> en el
+          IES Brianda de Mendoza, aprendiendo algo nuevo cada día. Antes hice mis primeras
+          prácticas en <strong>3XA Design</strong>, donde trabajé en proyectos reales de
+          maquetación web y descubrí que esto es lo que me apasiona de verdad.
+        </p>
+        <p>
+          Me considero una persona <strong>creativa, comprometida y con ojo para el diseño</strong>.
+          No me conformo con que algo funcione: quiero que también se vea bien. Estoy buscando
+          activamente <span class="highlight-box">prácticas o una oportunidad laboral</span> donde
+          seguir creciendo y aportar mi energía a un equipo real.
+        </p>
+        <p>
+          Cuando no estoy programando, me gusta el diseño, la fotografía y seguir aprendiendo
+          cosas nuevas. Si crees que encajaríamos, <strong>¡hablemos!</strong>
+        </p>
+      </div>
+
+      <div class="values-list">
+        <div class="value-item glass reveal">
+          <div class="v-ico">🎨</div>
+          <div><div class="v-name">Creatividad</div><div class="v-desc">Me gusta que las cosas tengan su propio estilo y personalidad.</div></div>
+        </div>
+        <div class="value-item glass reveal">
+          <div class="v-ico">🔥</div>
+          <div><div class="v-name">Compromiso</div><div class="v-desc">Si me meto en algo, lo hago con todas las ganas.</div></div>
+        </div>
+        <div class="value-item glass reveal">
+          <div class="v-ico">🤝</div>
+          <div><div class="v-name">Trabajo en equipo</div><div class="v-desc">Aprender de los demás y colaborar es lo que más me motiva.</div></div>
+        </div>
+        <div class="value-item glass reveal">
+          <div class="v-ico">📈</div>
+          <div><div class="v-name">Ganas de crecer</div><div class="v-desc">Cada proyecto es una oportunidad de aprender algo nuevo.</div></div>
+        </div>
+        <div class="value-item glass reveal">
+          <div class="v-ico">🎯</div>
+          <div><div class="v-name">Responsabilidad</div><div class="v-desc">Puntual, organizada y con la cabeza en lo que toca.</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ SKILLS ═══════════ -->
+  <section id="skills" class="section">
+    <p class="s-label reveal">Lo que traigo</p>
+    <h2 class="s-title reveal">Mis <em>habilidades</em></h2>
+
+    <div class="skills-grid">
+
+      <div class="sk-card glass reveal" data-skill="HTML">
+        <div class="sk-icon">💻</div>
+        <div class="sk-name">HTML &amp; CSS</div>
+        <div class="sk-desc">Maquetación semántica, layouts responsivos y estilos visuales cuidados.</div>
+        <div class="sk-bar-wrap"><div class="sk-bar" style="width:85%"></div></div>
+      </div>
+
+      <div class="sk-card glass reveal" data-skill="JS">
+        <div class="sk-icon">⚡</div>
+        <div class="sk-name">JavaScript</div>
+        <div class="sk-desc">Interactividad, lógica de interfaz y manipulación del DOM.</div>
+        <div class="sk-bar-wrap"><div class="sk-bar" style="width:70%"></div></div>
+      </div>
+
+      <div class="sk-card glass reveal" data-skill="GIT">
+        <div class="sk-icon">🔀</div>
+        <div class="sk-name">Control de versiones</div>
+        <div class="sk-desc">Flujos de trabajo con Git y metodologías ágiles en equipo.</div>
+        <div class="sk-bar-wrap"><div class="sk-bar" style="width:65%"></div></div>
+      </div>
+
+      <div class="sk-card glass reveal" data-skill="UX">
+        <div class="sk-icon">🎨</div>
+        <div class="sk-name">Diseño visual</div>
+        <div class="sk-desc">Atención al detalle, mejora estética y sentido creativo natural.</div>
+        <div class="sk-bar-wrap"><div class="sk-bar" style="width:80%"></div></div>
+      </div>
+
+      <div class="sk-card glass reveal" data-skill="ORG">
+        <div class="sk-icon">📦</div>
+        <div class="sk-name">Organización</div>
+        <div class="sk-desc">Gestión de tareas, control de procesos y responsabilidad laboral.</div>
+        <div class="sk-bar-wrap"><div class="sk-bar" style="width:90%"></div></div>
+      </div>
+
+      <div class="sk-card glass reveal" data-skill="EN">
+        <div class="sk-icon">🌍</div>
+        <div class="sk-name">Inglés B1</div>
+        <div class="sk-desc">Comprensión y comunicación en entornos digitales internacionales.</div>
+        <div class="sk-bar-wrap"><div class="sk-bar" style="width:60%"></div></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════ PROYECTOS ═══════════ -->
+  <section id="proyectos" class="section">
+    <p class="s-label reveal">Lo que he hecho</p>
+    <h2 class="s-title reveal"><em>Proyectos</em></h2>
+
+    <div class="proj-grid">
+
+      <div class="proj-card glass reveal">
+        <div class="proj-thumb" style="background:linear-gradient(135deg,rgba(167,139,250,.32),rgba(244,114,182,.24));">🌐</div>
+        <div class="proj-body">
+          <span class="proj-tag">Prácticas · 3XA Design · 2023</span>
+          <div class="proj-name">Maquetación &amp; Diseño Web</div>
+          <div class="proj-desc">Desarrollo de páginas web con HTML, CSS y JS. Mejora visual de sitios reales en equipo con metodologías ágiles y control de versiones.</div>
+          <div class="proj-links">
+            <span class="proj-btn">HTML</span>
+            <span class="proj-btn">CSS</span>
+            <span class="proj-btn">JavaScript</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="proj-card glass reveal">
+        <div class="proj-thumb" style="background:linear-gradient(135deg,rgba(34,211,238,.24),rgba(167,139,250,.24));">✨</div>
+        <div class="proj-body">
+          <span class="proj-tag">Proyecto personal · 2025</span>
+          <div class="proj-name">Portfolio Personal</div>
+          <div class="proj-desc">Este portfolio: diseñado y programado desde cero con HTML, CSS y JavaScript. Glassmorphism, partículas y animaciones custom.</div>
+          <div class="proj-links">
+            <span class="proj-btn">HTML</span>
+            <span class="proj-btn">CSS</span>
+            <span class="proj-btn">JS</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="proj-card glass reveal">
+        <div class="proj-thumb" style="background:linear-gradient(135deg,rgba(251,191,36,.24),rgba(244,114,182,.24));">🚀</div>
+        <div class="proj-body">
+          <span class="proj-tag">En progreso · DAM 2024–2026</span>
+          <div class="proj-name">Próximo proyecto</div>
+          <div class="proj-desc">Actualmente cursando DAM y trabajando en nuevos proyectos. ¡Muy pronto más novedades por aquí — stay tuned!</div>
+          <div class="proj-links">
+            <span class="proj-btn">Próximamente</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════ EXPERIENCIA ═══════════ -->
+  <section id="experiencia" class="section">
+    <p class="s-label reveal">Mi trayectoria</p>
+    <h2 class="s-title reveal"><em>Experiencia</em> &amp; formación</h2>
+
+    <div class="tl">
+
+      <div class="tl-item glass reveal">
+        <div class="tl-dot" style="background:var(--violet)"></div>
+        <div>
+          <div class="tl-date">Marzo 2023</div>
+          <div class="tl-role">Prácticas Formativas — Desarrollo Web</div>
+          <div class="tl-company">3XA Design</div>
+          <ul class="tl-tasks">
+            <li>Desarrollo y diseño de páginas web con HTML, CSS y JavaScript.</li>
+            <li>Colaboración en maquetación y mejora visual de sitios web.</li>
+            <li>Trabajo en equipo con metodologías ágiles y control de versiones.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tl-item glass reveal">
+        <div class="tl-dot" style="background:var(--pink)"></div>
+        <div>
+          <div class="tl-date">Jul — Ago 2023</div>
+          <div class="tl-role">Operaria Logística</div>
+          <div class="tl-company">Pull &amp; Bear — Cabanillas</div>
+          <ul class="tl-tasks">
+            <li>Preparación y empaquetado de pedidos.</li>
+            <li>Control de stock y verificación de mercancías.</li>
+            <li>Colaboración en equipos de trabajo.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tl-item glass reveal">
+        <div class="tl-dot" style="background:var(--cyan)"></div>
+        <div>
+          <div class="tl-date">Ago — Sep 2023</div>
+          <div class="tl-role">Auxiliar de Almacén</div>
+          <div class="tl-company">4PX</div>
+          <ul class="tl-tasks">
+            <li>Preparación y empaquetado de pedidos.</li>
+            <li>Carga, descarga y etiquetado de productos.</li>
+            <li>Control de calidad.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Formación -->
+    <div style="margin-top:3rem">
+      <p class="s-label reveal" style="margin-bottom:1.2rem">Formación</p>
+      <div class="tl">
+        <div class="tl-item glass reveal">
+          <div class="tl-dot" style="background:var(--amber)"></div>
+          <div>
+            <div class="tl-date">2024 — 2026 (en curso)</div>
+            <div class="tl-role">CFGS — Desarrollo de Aplicaciones Multiplataforma</div>
+            <div class="tl-company">IES Brianda de Mendoza</div>
+          </div>
+        </div>
+        <div class="tl-item glass reveal">
+          <div class="tl-dot" style="background:#94a3b8"></div>
+          <div>
+            <div class="tl-date">Finalizado</div>
+            <div class="tl-role">Bachillerato Científico</div>
+            <div class="tl-company">Santa Francisca Javier Cabrini</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Idiomas -->
+    <div style="margin-top:2.5rem">
+      <p class="s-label reveal">Idiomas</p>
+      <div class="lang-row">
+        <div class="lang-pill glass reveal">
+          <span style="font-size:1.5rem">🇪🇸</span>
+          <div><strong>Castellano</strong><span class="lang-lv">Nativo</span></div>
+        </div>
+        <div class="lang-pill glass reveal">
+          <span style="font-size:1.5rem">🇬🇧</span>
+          <div><strong>Inglés</strong><span class="lang-lv">Nivel B1</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ CONTACTO ═══════════ -->
+  <section id="contacto" class="section">
+    <p class="s-label reveal">Hablemos</p>
+    <div class="contact-box glass reveal">
+      <div>
+        <div class="contact-title">¿Tienes algo<br><em>en mente?</em></div>
+        <p class="contact-sub">
+          Estoy buscando activamente prácticas y oportunidades en desarrollo web o diseño.
+          Si tienes un proyecto o un hueco en tu equipo, ¡escríbeme! Respondo rápido. 🚀
+        </p>
+        <a href="mailto:claudiaop03@gmail.com" class="btn btn-primary">Enviar email ✉️</a>
+      </div>
+      <div class="contact-links">
+        <a href="mailto:claudiaop03@gmail.com" class="c-link glass">
+          <span class="c-ico">✉️</span>
+          <div><div class="c-lbl">Email</div><div class="c-val">claudiaop03@gmail.com</div></div>
+        </a>
+        <a href="tel:+34620966501" class="c-link glass">
+          <span class="c-ico">📱</span>
+          <div><div class="c-lbl">Teléfono</div><div class="c-val">620 966 501</div></div>
+        </a>
+        <div class="c-link glass">
+          <span class="c-ico">📍</span>
+          <div><div class="c-lbl">Ubicación</div><div class="c-val">Villanueva de la Torre, Guadalajara</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-links">
+      <a href="#hero">Inicio</a>
+      <a href="#about">Sobre mí</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+    © 2026 Claudia Orta Pereda · Portfolio personal
+  </footer>
+
+</div><!-- /wrap -->
+
+<script src="main.js"></script>
+</body>
+</html>
