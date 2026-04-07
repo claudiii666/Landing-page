@@ -1,7 +1,3 @@
-/* ═══════════════════════════════════════════
-   CLAUDIA ORTEGA — main.js
-   Particles · Cursor · Counters · Scroll FX
-   ═══════════════════════════════════════════ */
 
 /* ── CUSTOM CURSOR ─────────────────────── */
 const ring = document.getElementById('cursor-ring');
