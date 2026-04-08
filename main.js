@@ -1,4 +1,3 @@
-
 /* ── PARTICLE CANVAS ───────────────────── */
 const canvas = document.getElementById('particle-canvas');
 const ctx    = canvas.getContext('2d');
@@ -141,6 +140,12 @@ navAs.forEach(a => {
   a.addEventListener('click', e => {
     e.preventDefault();
     document.querySelector(a.getAttribute('href'))?.scrollIntoView({ behavior: 'smooth' });
+    
+    // Cierra el menú en móvil cuando se hace clic en un enlace
+    const navLinks = document.getElementById('nav-links');
+    if (navLinks.classList.contains('show')) {
+      navLinks.classList.remove('show');
+    }
   });
 });
 
@@ -174,4 +179,12 @@ document.querySelectorAll('.btn-primary').forEach(btn => {
   btn.addEventListener('mouseleave', () => {
     btn.style.transform = '';
   });
+});
+
+/* ── MENÚ MÓVIL (NUEVO) ────────────────── */
+const mobileMenuBtn = document.getElementById('mobile-menu');
+const navLinks = document.getElementById('nav-links');
+
+mobileMenuBtn.addEventListener('click', () => {
+  navLinks.classList.toggle('show');
 });

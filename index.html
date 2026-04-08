@@ -3,18 +3,15 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Claudia Orta Pereda</title>
+  <title>Claudia Orta Pereda | Portafolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- ── PROGRESS BAR ──────────────────── -->
 <div id="progress-bar"></div>
 
-<!-- ── PARTICLES ─────────────────────── -->
 <canvas id="particle-canvas"></canvas>
 
-<!-- ── BLOBS ─────────────────────────── -->
 <div class="blobs">
   <div class="blob b1"></div>
   <div class="blob b2"></div>
@@ -22,15 +19,14 @@
   <div class="blob b4"></div>
 </div>
 
-<!-- ── BACK TO TOP ───────────────────── -->
 <button id="back-top" aria-label="Volver arriba">↑</button>
 
 <div class="wrap">
 
-  <!-- NAV -->
   <nav>
-    <div class="nav-logo">C.O.P <br></div>
-    <ul class="nav-links">
+    <div class="nav-logo">C.O.P</div>
+    <div class="menu-toggle" id="mobile-menu">☰</div>
+    <ul class="nav-links" id="nav-links">
       <li><a href="#hero">Inicio</a></li>
       <li><a href="#about">Sobre mí</a></li>
       <li><a href="#skills">Skills</a></li>
@@ -40,7 +36,6 @@
     </ul>
   </nav>
 
-  <!-- ═══════════ HERO ═══════════ -->
   <section id="hero">
     <div class="hero-content">
       <h1 class="hero-name">
@@ -67,12 +62,11 @@
       </div>
     </div>
 
-    <!-- Foto placeholder -->
     <div class="hero-visual">
       <div class="photo-wrap">
         <div class="spin-ring"></div>
         <div class="photo-card">
-          <img src="img/mifoto.jpg" alt="Claudia Orta">
+          <img src="img/mifoto.jpg" alt="Retrato de Claudia Orta Pereda">
         </div>
         <div class="photo-tag t1">Creativa</div>
         <div class="photo-tag t2">Organizada</div>
@@ -82,134 +76,131 @@
 
   </section>
 
-  <!-- ═══════════ STATS ═══════════ -->
   <div class="stats-bar">
     <div class="stat-card glass reveal">
-      
       <span class="stat-num" data-target="3" data-suffix="+">0</span>
       <div class="stat-label">Proyectos<br>completados</div>
     </div>
     <div class="stat-card glass reveal">
-      
       <span class="stat-num" data-target="2" data-suffix="">0</span>
       <div class="stat-label">Años en<br>desarrollo web</div>
     </div>
     <div class="stat-card glass reveal">
-      
       <span class="stat-num" data-target="2" data-suffix="">0</span>
       <div class="stat-label">Idiomas:<br>ES · EN</div>
     </div>
     <div class="stat-card glass reveal">
-      
       <span class="stat-num" data-target="100" data-suffix="%">0</span>
       <div class="stat-label">Ganas de<br>aprender</div>
     </div>
   </div>
 
-  <!-- ═══════════ SOBRE MÍ ═══════════ -->
   <section id="about" class="section">
   <p class="s-label reveal">Quién soy</p>
   <h2 class="s-title reveal">Sobre <em>mí</em></h2>
 
   <div class="about-grid">
-    
     <div class="about-text reveal">
-
       <p>
-        Soy <strong>Claudia</strong>, desarrolladora de software formada en 
+        ¡Hola! Soy <strong>Claudia</strong>, desarrolladora de software especializada en 
         <span class="highlight-box">Desarrollo de Aplicaciones Multiplataforma</span>. 
         Me gusta crear aplicaciones y páginas web que combinen <strong>funcionalidad, 
         orden y diseño </strong>.
       </p>
-
       <p>
-        Durante mi formación he trabajado con diferentes tecnologías como 
+        Durante mi formación he trabajado con tecnologías como 
         <strong>Java, Python, SQL, HTML y CSS</strong>, desarrollando 
-        aplicaciones de escritorio y web. También he creado interfaces 
+        aplicaciones de escritorio y web, interfaces 
         gráficas con <strong>Qt Designer</strong> y aplicaciones móviles con 
-        <strong>Android Studio</strong>.
+        <strong>Android Studio</strong>. Además, tengo experiencia con bases de datos como 
+        <strong>Oracle, MySQL y SQLite</strong>, usando SQL y PL/SQL para organizar y  
+        estructurar datos dentro de aplicaciones.
       </p>
-
-      <p>
-        Tengo experiencia trabajando con bases de datos como 
-        <strong>Oracle, MySQL y SQLite</strong>, utilizando SQL y PL/SQL para la 
-        gestión y estructuración de datos dentro de aplicaciones.
-      </p>
-
       <p>
         Me considero una persona <strong>organizada, detallista y con sensibilidad 
         por el diseño</strong>. Me gusta que el código sea claro, que las aplicaciones 
-        funcionen correctamente y que la experiencia del usuario sea sencilla y agradable.
+        funcionen a la perfección y que la experiencia del usuario sea sencilla y agradable.
       </p>
-
       <p>
         Busco seguir creciendo como desarrolladora y participar en proyectos donde 
-        pueda aportar <strong>estructura, creatividad y soluciones bien pensadas</strong>.
+        pueda aportar <strong>estructura, creatividad y soluciones</strong>.
       </p>
-
+    </div>
+    
+    <div class="values-list">
+        <div class="value-item glass reveal">
+          <div class="v-ico"><svg width="24" height="24" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M40,52.132l-1.445-0.964c-0.336-0.225-0.773-0.225-1.109,0L35,52.798l-2.445-1.63c-0.336-0.225-0.773-0.225-1.109,0L29,52.798l-2.445-1.63c-0.336-0.225-0.773-0.225-1.109,0L24,52.132V30h-2v24c0,0.269,0.11,0.521,0.295,0.705l-0.002,0.002l9,9C31.488,63.902,31.744,64,32,64s0.512-0.098,0.707-0.293l9-9l-0.002-0.002C41.89,54.521,42,54.269,42,54V35h-2V52.132z"/><path d="M29,37h2c0-7.168-5.383-13-12-13v2C24.514,26,29,30.935,29,37z"/><path d="M35,42h2c0-7.047,3.206-13,7-13v-2C38.953,27,35,33.589,35,42z"/><path d="M27,25h2c0-2.206,1.346-4,3-4v-2C29.243,19,27,21.691,27,25z"/><path d="M20,16c1.654,0,3,1.794,3,4h2c0-3.309-2.243-6-5-6V16z"/><path d="M41,24v-2c-4.963,0-9,4.486-9,10h2C34,27.589,37.141,24,41,24z"/></svg></div>
+          <div><div class="v-name">Creatividad</div><div class="v-desc">Me gusta que las cosas tengan su propio estilo y personalidad.</div></div>
+        </div>
+        <div class="value-item glass reveal">
+          <div class="v-ico">🔥</div>
+          <div><div class="v-name">Compromiso</div><div class="v-desc">Si me meto en algo, lo hago con todas las ganas.</div></div>
+        </div>
+        <div class="value-item glass reveal">
+          <div class="v-ico">🤝</div>
+          <div><div class="v-name">Trabajo en equipo</div><div class="v-desc">Aprender de los demás y colaborar es lo que más me motiva.</div></div>
+        </div>
+        <div class="value-item glass reveal">
+          <div class="v-ico">📈</div>
+          <div><div class="v-name">Ganas de crecer</div><div class="v-desc">Cada proyecto es una oportunidad de aprender algo nuevo.</div></div>
+        </div>
+        <div class="value-item glass reveal">
+          <div class="v-ico">🎯</div>
+          <div><div class="v-name">Responsabilidad</div><div class="v-desc">Puntual, organizada y con la cabeza en lo que toca.</div></div>
+        </div>
     </div>
   </div>
   </section>
 
-  <!-- ═══════════ SKILLS ═══════════ -->
   <section id="skills" class="section">
     <p class="s-label reveal">Lo que traigo</p>
     <h2 class="s-title reveal">Mis <em>habilidades</em></h2>
 
     <div class="skills-grid">
-
       <div class="sk-card glass reveal" data-skill="HTML">
         <div class="sk-icon">💻</div>
         <div class="sk-name">HTML &amp; CSS</div>
         <div class="sk-desc">Maquetación semántica, CSS moderno y diseños responsive con foco en claridad.</div>
         <div class="sk-bar-wrap"><div class="sk-bar" style="width:90%"></div></div>
       </div>
-
       <div class="sk-card glass reveal" data-skill="JS">
         <div class="sk-icon">⚡</div>
         <div class="sk-name">JavaScript moderno</div>
         <div class="sk-desc">Interactividad limpia, animaciones suaves y lógica front-end para experiencias ágiles.</div>
         <div class="sk-bar-wrap"><div class="sk-bar" style="width:75%"></div></div>
       </div>
-
       <div class="sk-card glass reveal" data-skill="GIT">
         <div class="sk-icon">🔀</div>
         <div class="sk-name">Git &amp; flujo de trabajo</div>
         <div class="sk-desc">Control de versiones, colaboración y entregas ordenadas dentro de equipos.</div>
         <div class="sk-bar-wrap"><div class="sk-bar" style="width:70%"></div></div>
       </div>
-
       <div class="sk-card glass reveal" data-skill="UX">
         <div class="sk-icon">🎨</div>
         <div class="sk-name">Diseño visual</div>
         <div class="sk-desc">Composición, jerarquía visual y una estética funcional que comunica con claridad.</div>
         <div class="sk-bar-wrap"><div class="sk-bar" style="width:85%"></div></div>
       </div>
-
       <div class="sk-card glass reveal" data-skill="ORG">
         <div class="sk-icon">📦</div>
         <div class="sk-name">Organización</div>
         <div class="sk-desc">Gestión de tareas, planificación y cumplimiento de plazos con atención al detalle.</div>
         <div class="sk-bar-wrap"><div class="sk-bar" style="width:88%"></div></div>
       </div>
-
       <div class="sk-card glass reveal" data-skill="EN">
         <div class="sk-icon">🌍</div>
         <div class="sk-name">Inglés B1</div>
         <div class="sk-desc">Comunicación funcional en proyectos internacionales y documentación técnica.</div>
         <div class="sk-bar-wrap"><div class="sk-bar" style="width:65%"></div></div>
       </div>
-
     </div>
   </section>
 
-  <!-- ═══════════ PROYECTOS ═══════════ -->
   <section id="proyectos" class="section">
     <p class="s-label reveal">Lo que he hecho</p>
     <h2 class="s-title reveal"><em>Proyectos</em></h2>
 
     <div class="proj-grid">
-
       <div class="proj-card glass reveal">
         <div class="proj-thumb" style="background:linear-gradient(135deg,rgba(167,139,250,.32),rgba(244,114,182,.24));">🌐</div>
         <div class="proj-body">
@@ -251,17 +242,14 @@
           </div>
         </div>
       </div>
-
     </div>
   </section>
 
-  <!-- ═══════════ EXPERIENCIA ═══════════ -->
   <section id="experiencia" class="section">
     <p class="s-label reveal">Mi trayectoria</p>
     <h2 class="s-title reveal"><em>Experiencia</em> &amp; formación</h2>
 
     <div class="tl">
-
       <div class="tl-item glass reveal">
         <div class="tl-dot" style="background:var(--violet)"></div>
         <div>
@@ -303,10 +291,8 @@
           </ul>
         </div>
       </div>
-
     </div>
 
-    <!-- Formación -->
     <div style="margin-top:3rem">
       <p class="s-label reveal" style="margin-bottom:1.2rem">Formación</p>
       <div class="tl">
@@ -329,7 +315,6 @@
       </div>
     </div>
 
-    <!-- Idiomas -->
     <div style="margin-top:2.5rem">
       <p class="s-label reveal">Idiomas</p>
       <div class="lang-row">
@@ -345,7 +330,6 @@
     </div>
   </section>
 
-  <!-- ═══════════ CONTACTO ═══════════ -->
   <section id="contacto" class="section">
     <p class="s-label reveal">Hablemos</p>
     <div class="contact-box glass reveal">
@@ -359,17 +343,18 @@
       </div>
       <div class="contact-links">
         <a href="mailto:claudiaop03@gmail.com" class="c-link glass">
-          <span class="c-ico">✉️</span>
+          <span class="c-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></span>
           <div><div class="c-lbl">Email</div><div class="c-val">claudiaop03@gmail.com</div></div>
         </a>
-        <a href="tel:+34620966501" class="c-link glass">
-          <span class="c-ico">📱</span>
-          <div><div class="c-lbl">Teléfono</div><div class="c-val">620 966 501</div></div>
+      
+        <a href="https://github.com/claudia6666" target="_blank" class="c-link glass">
+          <span class="c-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></span>
+          <div><div class="c-lbl">GitHub</div><div class="c-val">@claudia6666</div></div>
         </a>
-        <div class="c-link glass">
-          <span class="c-ico">📍</span>
-          <div><div class="c-lbl">Ubicación</div><div class="c-val">Villanueva de la Torre, Guadalajara</div></div>
-        </div>
+        <a href="https://linkedin.com/in/claudia-orta-pereda" target="_blank" class="c-link glass">
+          <span class="c-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></span>
+          <div><div class="c-lbl">LinkedIn</div><div class="c-val">Claudia Orta Pereda</div></div>
+        </a>
       </div>
     </div>
   </section>
@@ -384,8 +369,6 @@
     Portafolio profesional diseñado y desarrollado con atención al detalle.
   </footer>
 
-</div><!-- /wrap -->
-
-<script src="main.js"></script>
+</div><script src="main.js"></script>
 </body>
 </html>
