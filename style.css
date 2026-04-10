@@ -291,7 +291,7 @@ nav:hover { box-shadow:0 8px 50px rgba(120,90,200,.2); }
 .lang-badge { font-size:1.05rem; font-weight:800; padding:.65rem 1rem; border-radius:14px; letter-spacing:.04em; flex-shrink:0; font-family:'Instrument Serif',serif; font-style:italic; border:1px solid rgba(255,255,255,.5); backdrop-filter:blur(10px); }
 
 /* ── FUTURE TIMELINE ───────────────────── */
-.future-tl { display:flex; flex-direction:column; gap:0; position:relative; --left-col: 72px;}
+.future-tl { display:flex; flex-direction:column; gap:0; position:relative; --left-col: 72px; text-align: left;}
 .future-tl::before {
   content:''; position:absolute; left: calc(var(--left-col) / 2); top:24px; bottom:24px; width:2px;
   background:linear-gradient(to bottom,var(--violet),var(--pink),var(--cyan),var(--amber));
