@@ -294,14 +294,16 @@ nav:hover { box-shadow:0 8px 50px rgba(120,90,200,.2); }
 /* ── FUTURE TIMELINE ───────────────────── */
 .future-tl { display:flex; flex-direction:column; gap:0; position:relative; text-align: left;}
 .future-tl::before {
-  content:''; position:absolute; left: 122px; top:24px; bottom:24px; width:2px;
+  content:''; position:absolute; left: 7px; top:24px; bottom:24px; width:2px;
   background:linear-gradient(to bottom,var(--violet),var(--pink),var(--cyan),var(--amber));
-  opacity:.3; border-radius:2px; z-index: 0;
+  opacity:.3; border-radius:2px; z-index: -1;
 }
 .ftl-item { display:grid; grid-template-columns:1fr; gap:0; align-items:center; margin-bottom:1.2rem; }
-.ftl-left { display:flex; flex-direction:row; align-items:center; gap:1rem; padding-top:0; transform: none; position: relative; z-index: 1; justify-content: flex-start; width: 100%; }
-.ftl-when { font-size:.75rem; font-weight:700; text-transform:uppercase; letter-spacing:.07em; color:var(--muted); text-align:right; min-width:100px; }
-.ftl-dot { width:14px; height:14px; border-radius:50%; flex-shrink:0; box-shadow:0 0 0 4px rgba(255,255,255,.8),0 0 12px rgba(129,140,248,.3); z-index:2; }
+.ftl-left { display:flex; flex-direction:row; align-items:flex-start; gap:0.5rem; position: relative; z-index: 1; width: auto; }
+.ftl-dot { width:14px; height:14px; border-radius:50%; flex-shrink:0; box-shadow:0 0 0 4px rgba(255,255,255,.8),0 0 12px rgba(129,140,248,.3); z-index:2; margin-top: 0.3rem; }
+.ftl-wrap { display:flex; flex-direction:column; gap:0.5rem; }
+.ftl-when { font-size:.75rem; font-weight:700; text-transform:uppercase; letter-spacing:.07em; color:var(--muted); }
+.ftl-content { border-radius:16px; padding:1.3rem 1.5rem; transition:transform .22s,box-shadow .22s; }
 .ftl-content { border-radius:16px; padding:1.3rem 1.5rem; transition:transform .22s,box-shadow .22s; flex:1; }
 .ftl-content:hover { transform:translateY(-2px); box-shadow:0 12px 36px rgba(120,90,200,.13); position: relative; z-index: 1;}
 .ftl-goal { font-weight:700; font-size:.98rem; margin-bottom:.3rem; }
@@ -388,11 +390,12 @@ footer { backdrop-filter:blur(8px); text-align:center; padding:3rem 2rem; font-s
 @media (max-width:480px) {
   .soft-grid { grid-template-columns:1fr; }
   .hobbies-grid { grid-template-columns:1fr 1fr; }
-  .future-tl { padding-left: 20px; }
+  .future-tl { padding-left: 0; }
   .future-tl::before { left: 6px; top: 10px; bottom: 10px; }
   .ftl-item { margin-bottom: 1.5rem; }
-  .ftl-left { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
-  .ftl-when { min-width: auto; text-align: left; font-size: .7rem; }
-  .ftl-dot { width: 12px; height: 12px; margin-left: 4px; }
+  .ftl-left { flex-direction: row; align-items: flex-start; gap: 0; position: relative; }
+  .ftl-dot { width: 12px; height: 12px; flex-shrink: 0; position: absolute; left: 0; top: 0; }
+  .ftl-wrap { padding-left: 20px; display: flex; flex-direction: column; }
+  .ftl-when { min-width: auto; text-align: left; font-size: .7rem; margin-bottom: 0.3rem; }
   .ftl-content { padding: 1rem; }
 }
