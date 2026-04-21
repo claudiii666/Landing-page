@@ -184,13 +184,17 @@
     </div>
   </div>
 
-  <section id="skills" class="section">
+  <!-- ════════════════════════════════════════════════════════
+     BLOQUE 1 — Pega esto reemplazando section#skills
+     ════════════════════════════════════════════════════════ -->
+<section id="skills" class="section">
   <p class="s-label reveal">Tecnologías</p>
   <h2 class="s-title reveal">Mis <em>habilidades</em></h2>
 
-  <div class="skills-grid">
+  <!-- CARRUSEL HABILIDADES TÉCNICAS -->
+  <div class="skills-carousel-wrap">
+    <div class="skills-carousel-track" id="skillsTrack">
 
-    <div class="skills-row">
       <div class="sk-card glass reveal">
         <div class="sk-icon"><img src="img/html.png" alt="HTML & CSS"></div>
         <div class="sk-name">HTML & CSS</div>
@@ -211,9 +215,7 @@
         <div class="sk-desc">Desarrollo de aplicaciones móviles utilizando Android Studio.</div>
         <div class="sk-bar-wrap"><div class="sk-bar" style="width:70%"></div></div>
       </div>
-    </div>
 
-    <div class="skills-row">
       <div class="sk-card glass reveal">
         <div class="sk-icon"><img src="img/python.png" alt="Python"></div>
         <div class="sk-name">Python</div>
@@ -234,46 +236,91 @@
         <div class="sk-desc">Modelado y validación de datos con XML, DTD y XSD.</div>
         <div class="sk-bar-wrap"><div class="sk-bar" style="width:75%"></div></div>
       </div>
-    </div>
 
-    <!-- Soft Skills -->
-    <div class="soft-skills-wrap">
-      <p class="s-label reveal" style="margin-top:3.5rem">Habilidades personales</p>
-      <h3 class="s-subtitle reveal">Soft <em>skills</em></h3>
-      <div class="soft-grid">
-        <div class="soft-card glass reveal">
-          <div class="soft-ico"><img src="img/APRENDER.png" alt="Aprendizaje continuo"></div>
-          <div class="soft-name">Aprendizaje continuo</div>
-          <div class="soft-desc">Me gusta aprender constantemente y seguir desarrollando mis habilidades. Disfruto investigando, probando nuevas herramientas y adquiriendo conocimientos que me ayuden a crecer como desarrolladora.</div>
-        </div>
-        <div class="soft-card glass reveal">
-          <div class="soft-ico"><img src="img/resolutiva.png" alt="Resolutiva e independiente"></div>
-          <div class="soft-name">Resolutiva e independiente</div>
-          <div class="soft-desc">Cuando me enfrento a un problema, lo analizo y busco soluciones por mi cuenta antes de rendirme. Me gusta investigar, probar diferentes enfoques y aprender durante el proceso hasta encontrar la mejor solución.</div>
-        </div>
-        <div class="soft-card glass reveal">
-          <div class="soft-ico"><img src="img/teamwork.png" alt="Trabajo en equipo"></div>
-          <div class="soft-name">Trabajo en equipo</div>
-          <div class="soft-desc">Disfruto colaborando con otras personas e intercambiando ideas. Creo que cuando hay buena comunicación y confianza en el equipo, el resultado final siempre es mejor.</div>
-        </div>
-        <div class="soft-card glass reveal">
-          <div class="soft-ico"><img src="img/organizacion.png" alt="Organización"></div>
-          <div class="soft-name">Organización</div>
-          <div class="soft-desc">Antes de empezar cualquier proyecto, me gusta definir una estructura clara. Trabajar con una base bien organizada me permite avanzar con mas seguridad, evitar bloqueos y mantener el foco en lo importante.</div>
-        </div>
-        <div class="soft-card glass reveal">
-          <div class="soft-ico"><img src="img/perseverancia.png" alt="Perseverancia"></div>
-          <div class="soft-name">Perseverancia</div>
-          <div class="soft-desc">Cuando algo no sale como esperaba, aprendo del error y sigo intentándolo hasta conseguir el resultado que busco. No me rindo fácilmente, y esa constancia es algo que noto que marca la diferencia tanto en el desarrollo como en el aprendizaje.</div>
-        </div>
-        <div class="soft-card glass reveal">
-          <div class="soft-ico"><img src="img/creativa.png" alt="Creatividad"></div>
-          <div class="soft-name">Creatividad</div>
-          <div class="soft-desc">Me gusta aportar ideas y explorar nuevas formas de enfocar los proyectos. Aplico la creatividad tanto en el desarrollo de funcionalidades como en el diseño, buscando siempre crear proyectos que sean útiles, claros y visualmente atractivos.</div>
-        </div>
+      <!-- ★ NUEVO: Spring Boot -->
+      <div class="sk-card glass reveal">
+        <div class="sk-icon"><img src="img/springboot.png" alt="Spring Boot"></div>
+        <div class="sk-name">Spring Boot</div>
+        <div class="sk-desc">Desarrollo de aplicaciones backend y APIs REST con el framework de Spring.</div>
+        <div class="sk-bar-wrap"><div class="sk-bar" style="width:60%"></div></div>
       </div>
+
     </div>
   </div>
+
+  <div class="carousel-nav">
+    <button class="carousel-btn" id="skillsPrev">←</button>
+    <div class="carousel-dots" id="skillsDots"></div>
+    <button class="carousel-btn" id="skillsNext">→</button>
+  </div>
+
+  <!-- SOFT SKILLS — nuevo carrusel con animación de texto -->
+  <!-- ════════════════════════════════════════════
+     Dentro de section#skills, reemplaza el bloque
+     <div class="soft-skills-wrap"> ... </div>
+     por este:
+     ════════════════════════════════════════════ -->
+
+<div class="soft-skills-wrap">
+  <p class="s-label reveal" style="margin-top:3.5rem">Habilidades personales</p>
+  <h3 class="s-subtitle reveal">Soft <em>skills</em></h3>
+
+  <div class="skills-slider reveal">
+    <div class="slider-container">
+      <div class="slider-track" id="sliderTrack">
+
+        <div class="slider-card">
+          <div class="card-number">01</div>
+          <div class="card-icon"><img src="img/APRENDER.png" alt="Aprendizaje continuo"></div>
+          <h3 class="card-title">Aprendizaje continuo</h3>
+          <p class="card-text">Investigo, pruebo nuevas herramientas y profundizo hasta entender bien cada concepto que despierta mi interés.</p>
+        </div>
+
+        <div class="slider-card">
+          <div class="card-number">02</div>
+          <div class="card-icon"><img src="img/resolutiva.png" alt="Resolutiva"></div>
+          <h3 class="card-title">Resolutiva</h3>
+          <p class="card-text">Analizo los problemas y busco soluciones de forma independiente, probando distintos enfoques antes de rendirme.</p>
+        </div>
+
+        <div class="slider-card">
+          <div class="card-number">03</div>
+          <div class="card-icon"><img src="img/teamwork.png" alt="Trabajo en equipo"></div>
+          <h3 class="card-title">Trabajo en equipo</h3>
+          <p class="card-text">Disfruto colaborando e intercambiando ideas. La buena comunicación siempre mejora el resultado final.</p>
+        </div>
+
+        <div class="slider-card">
+          <div class="card-number">04</div>
+          <div class="card-icon"><img src="img/organizacion.png" alt="Organización"></div>
+          <h3 class="card-title">Organización</h3>
+          <p class="card-text">Defino una estructura clara antes de empezar. Una base bien organizada me da seguridad para avanzar sin bloqueos.</p>
+        </div>
+
+        <div class="slider-card">
+          <div class="card-number">05</div>
+          <div class="card-icon"><img src="img/perseverancia.png" alt="Perseverancia"></div>
+          <h3 class="card-title">Perseverancia</h3>
+          <p class="card-text">Aprendo del error y sigo adelante. Esa constancia marca la diferencia tanto en el desarrollo como en el aprendizaje.</p>
+        </div>
+
+        <div class="slider-card">
+          <div class="card-number">06</div>
+          <div class="card-icon"><img src="img/creativa.png" alt="Creatividad"></div>
+          <h3 class="card-title">Creatividad</h3>
+          <p class="card-text">Exploro nuevas formas de enfocar cada proyecto y aplico la creatividad tanto en código como en diseño visual.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="slider-nav">
+      <button class="slider-btn slider-prev" id="sliderPrev">←</button>
+      <div class="slider-dots" id="sliderDots"></div>
+      <button class="slider-btn slider-next" id="sliderNext">→</button>
+    </div>
+  </div>
+</div>
 </section>
 
   <section id="proyectos" class="section">
@@ -325,15 +372,19 @@
     </div>
   </section>
 
-  <section id="experiencia" class="section">
-    <p class="s-label reveal">Mi trayectoria</p>
-    <h2 class="s-title reveal"><em>Experiencia</em> & formación</h2>
+  <!-- ══ EXPERIENCIA — reemplaza todo el section#experiencia ══ -->
+<section id="experiencia" class="section">
+  <p class="s-label reveal">Mi trayectoria</p>
+  <h2 class="s-title reveal"><em>Experiencia</em> & formación</h2>
 
-    <div class="tl">
-      <div class="tl-item glass reveal">
+  <!-- STACKING CARDS EXPERIENCIA -->
+  <div class="stack-container">
+
+    <div class="stack-card-wrap reveal" style="--stack-index:0; --stack-z:3;">
+      <div class="tl-item glass">
         <div class="tl-dot" style="background:var(--violet)"></div>
         <div>
-          <div class="tl-date">Marzo 2025</div>
+          <div class="tl-date">Marzo 2025/ Marzo - Mayo 2026</div>
           <div class="tl-role">Programadora Junior en Prácticas</div>
           <div class="tl-company">3XA Design - Remoto</div>
           <ul class="tl-tasks">
@@ -344,8 +395,10 @@
           </ul>
         </div>
       </div>
+    </div>
 
-      <div class="tl-item glass reveal">
+    <div class="stack-card-wrap reveal" style="--stack-index:1; --stack-z:2;">
+      <div class="tl-item glass">
         <div class="tl-dot" style="background:var(--pink)"></div>
         <div>
           <div class="tl-date">Jul — Ago 2023</div>
@@ -358,8 +411,10 @@
           </ul>
         </div>
       </div>
+    </div>
 
-      <div class="tl-item glass reveal">
+    <div class="stack-card-wrap reveal" style="--stack-index:2; --stack-z:1;">
+      <div class="tl-item glass">
         <div class="tl-dot" style="background:var(--cyan)"></div>
         <div>
           <div class="tl-date">Ago — Sep 2023</div>
@@ -367,17 +422,22 @@
           <div class="tl-company">4PX - Cabanillas del Campo</div>
           <ul class="tl-tasks">
             <li>Preparación y empaquetado de pedidos asegurando precisión y eficiencia.</li>
-          <li>Gestión y organización del stock, optimizando flujo de mercancía.</li>
-          <li>Trabajo colaborativo y cumplimiento de estándares de calidad bajo presión.</li>
+            <li>Gestión y organización del stock, optimizando flujo de mercancía.</li>
+            <li>Trabajo colaborativo y cumplimiento de estándares de calidad bajo presión.</li>
           </ul>
         </div>
       </div>
     </div>
 
-    <div style="margin-top:3rem">
-      <p class="s-label reveal" style="margin-bottom:1.2rem">Formación</p>
-      <div class="tl">
-        <div class="tl-item glass reveal">
+  </div>
+
+  <!-- FORMACIÓN -->
+  <div style="margin-top:3rem">
+    <p class="s-label reveal" style="margin-bottom:1.2rem">Formación</p>
+    <div class="stack-container">
+
+      <div class="stack-card-wrap reveal" style="--stack-index:0; --stack-z:2;">
+        <div class="tl-item glass">
           <div class="tl-dot" style="background:var(--amber)"></div>
           <div>
             <div class="tl-date">2023 — 2026 (en curso)</div>
@@ -385,7 +445,10 @@
             <div class="tl-company">IES Brianda de Mendoza</div>
           </div>
         </div>
-        <div class="tl-item glass reveal">
+      </div>
+
+      <div class="stack-card-wrap reveal" style="--stack-index:1; --stack-z:1;">
+        <div class="tl-item glass">
           <div class="tl-dot" style="background:#94a3b8"></div>
           <div>
             <div class="tl-date">Finalizado</div>
@@ -394,52 +457,55 @@
           </div>
         </div>
       </div>
-    </div>
 
-   <div style="margin-top:2.5rem">
-  <p class="s-label reveal">Idiomas</p>
-  <div class="lang-row">
-
-    <div class="lang-card glass reveal">
-      <div class="lang-flag">🇪🇸</div>
-      <div class="lang-info">
-        <div class="lang-name">Castellano</div>
-        <div class="lang-level-label">Nativo</div>
-        <div class="lang-bar-wrap">
-          <div class="lang-bar" style="width:100%; background: linear-gradient(90deg, var(--violet), var(--pink));"></div>
-        </div>
-        <div class="lang-dots">
-          <span class="dot active"></span>
-          <span class="dot active"></span>
-          <span class="dot active"></span>
-          <span class="dot active"></span>
-          <span class="dot active"></span>
-        </div>
-      </div>
-      <div class="lang-badge" style="background: linear-gradient(135deg, rgba(129,140,248,.18), rgba(244,114,182,.14)); color: var(--violet);">C2</div>
-    </div>
-
-    <div class="lang-card glass reveal">
-      <div class="lang-flag">🇬🇧</div>
-      <div class="lang-info">
-        <div class="lang-name">Inglés</div>
-        <div class="lang-level-label">Intermedio</div>
-        <div class="lang-bar-wrap">
-          <div class="lang-bar" style="width:55%; background: linear-gradient(90deg, var(--cyan), var(--violet));"></div>
-        </div>
-        <div class="lang-dots">
-          <span class="dot active"></span>
-          <span class="dot active"></span>
-          <span class="dot active"></span>
-          <span class="dot"></span>
-          <span class="dot"></span>
-        </div>
-      </div>
-      <div class="lang-badge" style="background: linear-gradient(135deg, rgba(34,211,238,.18), rgba(129,140,248,.14)); color: var(--cyan);">B1</div>
     </div>
   </div>
 
-   <!-- Timeline futuro -->
+  <!-- IDIOMAS — sin cambios -->
+  <div style="margin-top:2.5rem">
+    <p class="s-label reveal">Idiomas</p>
+    <div class="lang-row">
+
+      <div class="lang-card glass reveal">
+        <div class="lang-flag">🇪🇸</div>
+        <div class="lang-info">
+          <div class="lang-name">Castellano</div>
+          <div class="lang-level-label">Nativo</div>
+          <div class="lang-bar-wrap">
+            <div class="lang-bar" style="width:100%; background: linear-gradient(90deg, var(--violet), var(--pink));"></div>
+          </div>
+          <div class="lang-dots">
+            <span class="dot active"></span>
+            <span class="dot active"></span>
+            <span class="dot active"></span>
+            <span class="dot active"></span>
+            <span class="dot active"></span>
+          </div>
+        </div>
+        <div class="lang-badge" style="background: linear-gradient(135deg, rgba(129,140,248,.18), rgba(244,114,182,.14)); color: var(--violet);">C2</div>
+      </div>
+
+      <div class="lang-card glass reveal">
+        <div class="lang-flag">🇬🇧</div>
+        <div class="lang-info">
+          <div class="lang-name">Inglés</div>
+          <div class="lang-level-label">Intermedio</div>
+          <div class="lang-bar-wrap">
+            <div class="lang-bar" style="width:55%; background: linear-gradient(90deg, var(--cyan), var(--violet));"></div>
+          </div>
+          <div class="lang-dots">
+            <span class="dot active"></span>
+            <span class="dot active"></span>
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+        </div>
+        <div class="lang-badge" style="background: linear-gradient(135deg, rgba(34,211,238,.18), rgba(129,140,248,.14)); color: var(--cyan);">B1</div>
+      </div>
+    </div>
+
+    <!-- Timeline futuro — sin cambios -->
     <div style="margin-top:3.5rem">
       <p class="s-label reveal">Hacia dónde voy</p>
       <h3 class="s-subtitle reveal">Mi <em>futuro</em></h3>
@@ -451,8 +517,7 @@
               <div class="ftl-when">2026</div>
               <div class="ftl-content glass">
                 <div class="ftl-goal">Finalizar el CFGS DAM</div>
-                <div class="ftl-desc">Finalizar el Grado de Desarrollo de Aplicaciones Multiplataforma, un ciclo que me ha exigido mucho esfuerzo, pero que me ha ayudado a descubrir mi verdadera vocación dentro del mundo tecnológico.
-                   Ha sido un proceso de aprendizaje constante que me ha permitido confirmar hacia dónde quiero orientar mi futuro profesional.</div>
+                <div class="ftl-desc">Finalizar el Grado de Desarrollo de Aplicaciones Multiplataforma, un ciclo que me ha exigido mucho esfuerzo, pero que me ha ayudado a descubrir mi verdadera vocación dentro del mundo tecnológico.</div>
               </div>
             </div>
           </div>
@@ -464,7 +529,7 @@
               <div class="ftl-when">Corto plazo</div>
               <div class="ftl-content glass">
                 <div class="ftl-goal">Primera experiencia profesional</div>
-                <div class="ftl-desc">conseguir mi primer empleo en el sector tecnológico. Me gustaría tener la oportunidad de formar parte de un equipo en una empresa real, donde pueda aportar todo lo que he aprendido durante mi formación, sentirme valorada profesionalmente y seguir creciendo mientras aprendo de la experiencia del día a día.</div>
+                <div class="ftl-desc">Conseguir mi primer empleo en el sector tecnológico, formar parte de un equipo real y seguir creciendo mientras aprendo de la experiencia del día a día.</div>
               </div>
             </div>
           </div>
@@ -476,7 +541,7 @@
               <div class="ftl-when">Medio plazo</div>
               <div class="ftl-content glass">
                 <div class="ftl-goal">Consolidación y crecimiento profesional</div>
-                <div class="ftl-desc">Seguir ampliando mis conocimientos dentro del entorno laboral, participando en proyectos cada vez más completos y adquiriendo experiencia práctica que me permita fortalecer mis habilidades como desarrolladora de software.</div>
+                <div class="ftl-desc">Seguir ampliando mis conocimientos dentro del entorno laboral, participando en proyectos cada vez más completos y fortaleciendo mis habilidades como desarrolladora.</div>
               </div>
             </div>
           </div>
@@ -488,7 +553,7 @@
               <div class="ftl-when">Largo plazo</div>
               <div class="ftl-content glass">
                 <div class="ftl-goal">Desarrolladora full-stack independiente</div>
-                <div class="ftl-desc">Convertirme en desarrolladora full-stack, dominando diferentes áreas del desarrollo de software, y ser capaz de liderar proyectos de principio a fin, creando soluciones funcionales, bien estructuradas y con una buena experiencia de usuario, manteniéndome siempre en aprendizaje continuo.</div>
+                <div class="ftl-desc">Convertirme en desarrolladora full-stack, liderar proyectos de principio a fin y crear soluciones funcionales, bien estructuradas y con una buena experiencia de usuario.</div>
               </div>
             </div>
           </div>
@@ -496,7 +561,7 @@
       </div>
     </div>
 
-    <!-- Hobbies -->
+    <!-- Hobbies — sin cambios -->
     <div style="margin-top:3.5rem">
       <p class="s-label reveal">Fuera del código</p>
       <h3 class="s-subtitle reveal">Intereses & <em>hobbies</em></h3>
@@ -504,27 +569,27 @@
         <div class="hobby-card glass reveal">
           <div class="hobby-ico"><img src="img/autodidacta.png" alt="Aprendizaje autodidacta"></div>
           <div class="hobby-name">Aprendizaje autodidacta</div>
-          <div class="hobby-desc">Me encanta aprender cosas nuevas por mi cuenta. Cuando un tema despierta mi interés, investigo, practico y profundizo hasta entenderlo bien. Disfruto mucho del proceso de descubrir cómo funcionan las cosas y mejorar mis habilidades constantemente.</div>
+          <div class="hobby-desc">Me encanta aprender cosas nuevas por mi cuenta. Cuando un tema despierta mi interés, investigo, practico y profundizo hasta entenderlo bien.</div>
         </div>
         <div class="hobby-card glass reveal">
           <div class="hobby-ico"><img src="img/musica.png" alt="Música"></div>
           <div class="hobby-name">Música</div>
-          <div class="hobby-desc">La música forma parte de mi día a día, especialmente cuando programo. Me ayuda a concentrarme, aislarme de distracciones y entrar en un estado de enfoque en el que disfruto más trabajando.</div>
+          <div class="hobby-desc">La música forma parte de mi día a día, especialmente cuando programo. Me ayuda a concentrarme y entrar en un estado de enfoque.</div>
         </div>
         <div class="hobby-card glass reveal">
           <div class="hobby-ico"><img src="img/deporte.png" alt="Deporte"></div>
           <div class="hobby-name">Deporte</div>
-          <div class="hobby-desc">El deporte forma parte de mi rutina y me ayuda a mantener un equilibrio saludable. Después de muchas horas frente al ordenador, moverme me permite liberar estrés, despejar la mente y volver a mis proyectos con más energía y claridad mental.</div>
+          <div class="hobby-desc">El deporte forma parte de mi rutina. Después de muchas horas frente al ordenador, moverme me permite liberar estrés y volver con más energía.</div>
         </div>
         <div class="hobby-card glass reveal">
           <div class="hobby-ico"><img src="img/tecnologia.png" alt="Tecnología"></div>
           <div class="hobby-name">Curiosidad por la tecnología</div>
-          <div class="hobby-desc">Siento mucha curiosidad por todo lo que ocurre en el sector tecnológico, especialmente en el mundo de la IA y la ciberseguridad. Me gusta estar al día de nuevas herramientas y tendencias para entender cómo evoluciona la tecnología cada día.</div>
+          <div class="hobby-desc">Siento mucha curiosidad por todo lo que ocurre en el sector tecnológico, especialmente en el mundo de la IA y la ciberseguridad.</div>
         </div>
-        
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
   <section id="contacto" class="section">
   <p class="s-label reveal">Hablemos</p>
