@@ -709,7 +709,7 @@ mobileMenuBtn.addEventListener('click', () => {
   });
 
   function getVisibleCards() {
-    return window.innerWidth > 768 ? 2 : 1;
+    return window.innerWidth > 768 ? 3 : 1;
   }
 
   function updatePosition() {
@@ -799,6 +799,22 @@ mobileMenuBtn.addEventListener('click', () => {
 
   // Resize
   window.addEventListener('resize', updatePosition);
+
+  // Auto-play
+  let autoInterval = setInterval(() => {
+    const visible = getVisibleCards();
+    const next = (current + 1) % (N - visible + 1);
+    goTo(next);
+  }, 4000);
+
+  track.addEventListener('mouseenter', () => clearInterval(autoInterval));
+  track.addEventListener('mouseleave', () => {
+    autoInterval = setInterval(() => {
+      const visible = getVisibleCards();
+      const next = (current + 1) % (N - visible + 1);
+      goTo(next);
+    }, 4000);
+  });
 
   // Init
   updatePosition();
