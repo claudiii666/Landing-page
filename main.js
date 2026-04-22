@@ -157,7 +157,7 @@ btt.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth'
 
 
 /* ── TILT ON CARDS (subtle) ────────────── */
-document.querySelectorAll('.sk-card, .proj-card, .stat-card').forEach(card => {
+document.querySelectorAll('.sk-card, .proj-card, .project-card, .stat-card').forEach(card => {
   card.addEventListener('mousemove', e => {
     const r = card.getBoundingClientRect();
     const x = ((e.clientX - r.left) / r.width  - 0.5) * 10;
@@ -203,10 +203,23 @@ mobileMenuBtn.addEventListener('click', () => {
   if (!track) return;
 
   const cards        = track.querySelectorAll('.sk-card');
-  const VISIBLE      = window.innerWidth <= 820 ? 1 : 3;
+  const VISIBLE      = 3; // Siempre mostrar 3 cards
   const total        = cards.length;
   const pageCount    = Math.ceil(total / VISIBLE);
   let   currentPage  = 0;
+
+  /* Auto-play */
+  let autoPlayInterval = setInterval(() => {
+    goTo((currentPage + 1) % pageCount);
+  }, 3000); // Cambia cada 3 segundos
+
+  /* Pausar auto-play al hover */
+  track.addEventListener('mouseenter', () => clearInterval(autoPlayInterval));
+  track.addEventListener('mouseleave', () => {
+    autoPlayInterval = setInterval(() => {
+      goTo((currentPage + 1) % pageCount);
+    }, 3000);
+  });
 
   /* Crear dots */
   for (let i = 0; i < pageCount; i++) {
@@ -220,7 +233,7 @@ mobileMenuBtn.addEventListener('click', () => {
     currentPage = Math.max(0, Math.min(page, pageCount - 1));
     const cardWidth = cards[0].getBoundingClientRect().width;
     const gap = 24; // 1.5rem
-    const offset = currentPage * VISIBLE * (cardWidth + gap);
+    const offset = currentPage === pageCount - 1 ? (total - VISIBLE) * (cardWidth + gap) : currentPage * VISIBLE * (cardWidth + gap);
     track.style.transform = `translateX(-${offset}px)`;
 
     /* Update dots */
