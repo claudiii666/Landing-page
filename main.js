@@ -141,7 +141,6 @@ navAs.forEach(a => {
     e.preventDefault();
     document.querySelector(a.getAttribute('href'))?.scrollIntoView({ behavior: 'smooth' });
     
-    // Cierra el menú en móvil cuando se hace clic en un enlace
     const navLinks = document.getElementById('nav-links');
     if (navLinks.classList.contains('show')) {
       navLinks.classList.remove('show');
@@ -190,7 +189,7 @@ mobileMenuBtn.addEventListener('click', () => {
 });
 
 /* ══════════════════════════════════════════
-   CARRUSEL SKILLS TÉCNICAS
+   CARRUSEL SKILLS TÉCNICAS — CIRCULAR
    ══════════════════════════════════════════ */
 
 (function () {
@@ -203,23 +202,23 @@ mobileMenuBtn.addEventListener('click', () => {
   const cards      = Array.from(track.querySelectorAll('.sk-card'));
   const isMobile   = () => window.innerWidth <= 820;
   const visible    = () => isMobile() ? 1 : 3;
-  const pageCount  = () => Math.ceil(cards.length / visible());
+  const totalPages = Math.ceil(cards.length / 3);
   let   page       = 0;
 
   let autoPlayInterval = setInterval(() => {
-    goTo((page + 1) % pageCount());
+    nextPage();
   }, 3500);
 
   track.addEventListener('mouseenter', () => clearInterval(autoPlayInterval));
   track.addEventListener('mouseleave', () => {
     autoPlayInterval = setInterval(() => {
-      goTo((page + 1) % pageCount());
+      nextPage();
     }, 3500);
   });
 
   function buildDots() {
     dotsWrap.innerHTML = '';
-    for (let i = 0; i < pageCount(); i++) {
+    for (let i = 0; i < totalPages; i++) {
       const d = document.createElement('span');
       d.className = 'c-dot' + (i === page ? ' active' : '');
       d.addEventListener('click', () => goTo(i));
@@ -228,36 +227,54 @@ mobileMenuBtn.addEventListener('click', () => {
   }
 
   function goTo(p) {
-    page = Math.max(0, Math.min(p, pageCount() - 1));
+    page = p % totalPages;
     const cardW = cards[0].getBoundingClientRect().width;
     const gap   = 24;
-    track.style.transform = `translateX(-${page * visible() * (cardW + gap)}px)`;
+    const translateDist = page * visible() * (cardW + gap);
+
+    track.style.transition = 'transform 0.5s cubic-bezier(.22,.61,.36,1)';
+    track.style.transform = `translateX(-${translateDist}px)`;
 
     dotsWrap.querySelectorAll('.c-dot').forEach((d, i) =>
       d.classList.toggle('active', i === page));
 
-    prevBtn.disabled = page === 0;
-    nextBtn.disabled = page === pageCount() - 1;
-
-    const start = page * visible();
+    const visible_count = visible();
+    const start = page * visible_count;
     cards.forEach((c, i) => {
       const bar = c.querySelector('.sk-bar');
       if (!bar) return;
-      if (i >= start && i < start + visible()) setTimeout(() => bar.classList.add('animate'), 300);
+      if (i >= start && i < start + visible_count) {
+        setTimeout(() => bar.classList.add('animate'), 300);
+      }
     });
   }
 
-  prevBtn.addEventListener('click', () => goTo(page - 1));
-  nextBtn.addEventListener('click', () => goTo(page + 1));
+  function nextPage() {
+    page++;
+    if (page >= totalPages) page = 0;
+    goTo(page);
+  }
+
+  function prevPage() {
+    page--;
+    if (page < 0) page = totalPages - 1;
+    goTo(page);
+  }
+
+  prevBtn.addEventListener('click', prevPage);
+  nextBtn.addEventListener('click', nextPage);
 
   let sx = 0;
   track.addEventListener('touchstart', e => { sx = e.touches[0].clientX; }, { passive: true });
   track.addEventListener('touchend', e => {
     const d = sx - e.changedTouches[0].clientX;
-    if (Math.abs(d) > 50) goTo(page + (d > 0 ? 1 : -1));
+    if (Math.abs(d) > 50) {
+      if (d > 0) nextPage();
+      else prevPage();
+    }
   });
 
-  window.addEventListener('resize', () => { buildDots(); goTo(0); });
+  window.addEventListener('resize', () => { buildDots(); });
   buildDots();
   goTo(0);
 })();
@@ -279,5 +296,3 @@ mobileMenuBtn.addEventListener('click', () => {
 
   wraps.forEach(w => stackIO.observe(w));
 })();
-
-
