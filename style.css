@@ -394,10 +394,57 @@ nav:hover { box-shadow:0 8px 50px rgba(120,90,200,.2); }
 
 /* ── HOBBIES ───────────────────────────── */
 .hobbies-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:1.2rem; }
-.hobby-card { border-radius:18px; padding:1.5rem 1.3rem; transition:transform .26s,box-shadow .26s; text-align:center; }
-.hobby-card:hover { transform:translateY(-6px); box-shadow:0 18px 45px rgba(120,90,200,.15); }
-.hobby-ico { font-size:2.2rem; margin-bottom:.8rem; display:block; }
-.hobby-ico img { width:48px; height:48px; object-fit:contain; margin:0 auto; }
+.hobby-card { 
+  border-radius:18px; 
+  padding:1.5rem 1.3rem; 
+  transition:transform .26s,box-shadow .26s; 
+  text-align:center;
+  background: linear-gradient(135deg, rgba(255,255,255,0.55), rgba(255,255,255,0.40));
+  border: 1.5px solid rgba(255,255,255,0.75);
+  backdrop-filter: blur(20px) saturate(140%);
+  box-shadow: 0 10px 40px rgba(100,80,200,0.10), inset 0 1px 0 rgba(255,255,255,0.6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  position: relative;
+  overflow: hidden;
+}
+.hobby-card:hover { 
+  transform:translateY(-6px); 
+  box-shadow: 0 18px 45px rgba(120,90,200,.15), 0 0 30px rgba(244,114,182,0.10), inset 0 1px 0 rgba(255,255,255,0.7);
+  border-color: rgba(129,140,248,0.5);
+}
+.hobby-ico { 
+  font-size:2.2rem; 
+  margin-bottom:.8rem; 
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width: 70px;
+  height: 70px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(129,140,248,0.20), rgba(244,114,182,0.16));
+  border: 1.5px solid rgba(129,140,248,0.35);
+  transition: all 0.4s cubic-bezier(.22,.61,.36,1);
+  flex-shrink: 0;
+}
+.hobby-card:hover .hobby-ico { 
+  transform: scale(1.12) rotate(6deg);
+  box-shadow: 0 12px 35px rgba(129,140,248,0.35);
+  background: linear-gradient(135deg, rgba(129,140,248,0.30), rgba(244,114,182,0.25));
+}
+.hobby-ico img { 
+  width:40px; 
+  height:40px; 
+  object-fit:contain; 
+  margin:0 auto;
+  transition: transform 0.4s ease;
+}
+.hobby-card:hover .hobby-ico img {
+  transform: scale(1.1) rotate(-6deg);
+}
 .hobby-name { font-weight:700; font-size:.92rem; margin-bottom:.35rem; }
 .hobby-desc { font-size:.8rem; color:var(--muted); line-height:1.55; }
 
