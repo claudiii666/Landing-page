@@ -280,19 +280,3 @@ mobileMenuBtn.addEventListener('click', () => {
 })();
 
 
-/* ══════════════════════════════════════════
-   STACKING CARDS — highlight al hacer scroll
-   ══════════════════════════════════════════ */
-
-(function() {
-  const wraps = document.querySelectorAll('.stack-card-wrap');
-  if (!wraps.length) return;
-
-  const stackIO = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      e.target.classList.toggle('is-active', e.isIntersecting);
-    });
-  }, { threshold: 0.6, rootMargin: '-60px 0px -60px 0px' });
-
-  wraps.forEach(w => stackIO.observe(w));
-})();
